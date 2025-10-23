@@ -218,12 +218,15 @@ export const Home = () => {
                 backgroundImage: `url(${fondoImage})` 
             }} 
         >
-            {/* 👻 NUEVO: LOGO EN LA ESQUINA SUPERIOR IZQUIERDA 👻 */}
-            <img 
-                src={logoImage} 
-                alt="Logo Instituto Pedagógico Crear" 
-                className="site-logo"
-            />
+            {/* 👻 INICIO DE CAMBIO: ENVUELVE EL LOGO EN EL DIV logo-wrapper-desktop 👻 */}
+            <div className="logo-wrapper-desktop">
+                <img 
+                    src={logoImage} 
+                    alt="Logo Instituto Pedagógico Crear" 
+                    className="site-logo"
+                />
+            </div>
+            {/* 👻 FIN DE CAMBIO 👻 */}
             
             {/* Contenedor para centrar el título y el menú */}
             <div className="center-content-wrapper">

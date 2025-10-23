@@ -1,5 +1,3 @@
-/* styles/home.css */
-
 @import url('https://fonts.googleapis.com/css2?family=Creepster&family=Montserrat:wght@400;700&display=swap');
 
 /* --- General Page & Background Styles --- */
@@ -18,13 +16,13 @@ body {
     position: relative;
     box-sizing: border-box;
     background-size: cover;
-    background-position: center;
+    background-position: left center;
     background-attachment: fixed; 
     z-index: 0; 
 }
 
 /* ------------------------------------------------------------------ */
-/* CONTENEDORES PRINCIPALES Y CENTRADO (Corregidos) */
+/* CONTENEDORES PRINCIPALES Y CENTRADO */
 /* ------------------------------------------------------------------ */
 
 /* Contenedor que apila y centra el título y los botones */
@@ -35,7 +33,6 @@ body {
     flex-direction: column; /* Apila Título y Área de Contenido */
     align-items: center; /* Centra horizontalmente el contenido */
     justify-content: center; /* Centra verticalmente el contenido */
-    /* Ajuste para que el contenido suba un poco y no se oculte por el borde inferior de la imagen de fondo */
     padding-bottom: 50px; 
     z-index: 10; 
 }
@@ -48,7 +45,6 @@ body {
     align-items: center;
     width: auto; 
     padding: 0;
-    /* --- MANTENEMOS EL MARGEN ALTO PARA BOTONES BAJOS --- */
     margin-top: 80px; 
     z-index: 5;
 }
@@ -92,7 +88,6 @@ body {
 
 /* Base Box for Form and PDF */
 .content-box {
-    /* Fondo y diseño limpio del formulario */
     background-color: rgba(255, 255, 255, 0.95); 
     padding: 30px; 
     border: 4px solid #FF8C00; 
@@ -101,11 +96,8 @@ body {
     width: 90vw;
     text-align: center;
     border-radius: 12px;
-
-    /* CAMBIOS CLAVE PARA EL EFECTO POP-UP Y SCROLL */
-    max-height: 80vh; /* Limita la altura máxima al 80% del viewport */
-    overflow-y: auto; /* Habilita el scroll vertical si el contenido excede max-height */
-    /* Estilo para la barra de desplazamiento (opcional, mejora la estética) */
+    max-height: 80vh; 
+    overflow-y: auto; 
     scrollbar-color: #FF8C00 #f0f0f0;
     scrollbar-width: thin;
 }
@@ -115,7 +107,7 @@ body {
     width: 8px;
 }
 .content-box::-webkit-scrollbar-thumb {
-    background-color: #FF8C00; /* Naranja Calabaza */
+    background-color: #FF8C00; 
     border-radius: 10px;
 }
 .content-box::-webkit-scrollbar-track {
@@ -207,99 +199,8 @@ body {
     box-shadow: 0 5px 15px rgba(255, 69, 0, 0.7);
 }
 
-/* --- MODAL STYLES --- */
-
-/* Fondo oscuro y fijo que cubre toda la pantalla */
-.modal-backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.75); 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000; 
-}
-
-/* Contenido del modal */
-.modal-content {
-    background-color: #2c004d; 
-    border: 3px solid #ff4500; 
-    border-radius: 12px;
-    padding: 30px;
-    width: 90%;
-    max-width: 400px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: white;
-}
-
-.modal-title {
-    font-family: 'Creepster', cursive; 
-    font-size: 1.8rem;
-    margin-bottom: 25px;
-    color: #ffaa00; 
-    text-shadow: 1px 1px 2px #000;
-}
-
-.modal-buttons-container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 15px;
-    margin-bottom: 25px;
-}
-
-/* Estilo para los botones/enlaces dentro del modal */
-.modal-button {
-    text-align: center;
-    padding: 15px 20px;
-    border-radius: 8px;
-    font-weight: bold;
-    text-decoration: none; 
-    transition: transform 0.2s, box-shadow 0.2s;
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-.modal-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
-}
-
-.btn-web {
-    background-color: #007bff; 
-    color: white;
-    border: 2px solid #0056b3;
-}
-
-.btn-pdf {
-    background-color: #dc3545; 
-    color: white;
-    border: 2px solid #b02a37;
-}
-
-/* Botón de cierre */
-.modal-close-button {
-    background: #555;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.2s;
-}
-
-.modal-close-button:hover {
-    background: #888;
-}
-
 /* ------------------------------------------------------------------ */
-/* ESTILOS DEL TÍTULO DE HALLOWEEN (Goteo, Arco y Legibilidad Mejorada) */
+/* ESTILOS DEL TÍTULO DE HALLOWEEN (ESCRITORIO) */
 /* ------------------------------------------------------------------ */
 
 .halloween-title {
@@ -312,7 +213,6 @@ body {
     padding-bottom: 25px; 
     z-index: 10; 
     white-space: nowrap; 
-    /* Ajuste de margen para que se vea centrado con el arco */
     margin-top: -120px; 
     
     /* Efecto de Brillo (Glow) y Goteo */
@@ -333,40 +233,30 @@ body {
 /* El truco del arco: Rotar cada palabra envuelta en <span> */
 .halloween-title span {
     display: inline-block; 
-    /* El transform-origin en 'bottom center' es CLAVE para la rotación */
     transform-origin: bottom center; 
-    /* Más espacio entre palabras para un arco más amplio */
     margin: 0 10px;
-    
-    /* Animación de balanceo */
-    /* *** MODIFICACIÓN CLAVE: MÁS RÁPIDO Y LINEAR PARA TENSIÓN *** */
     animation: sway 1.5s linear infinite alternate;
 }
 
-/* --- AJUSTE CLAVE 1: Mayor rotación (25 grados) para un arco máximo --- */
-.halloween-title span:nth-child(1) { /* INSTITUTO */
+.halloween-title span:nth-child(1) { 
     transform: rotate(-25deg); 
     animation-delay: -0.5s; 
 }
-.halloween-title span:nth-child(2) { /* PEDAGÓGICO */
-    /* Nueva rotación negativa para forzar la caída en el centro */
+.halloween-title span:nth-child(2) { 
     transform: rotate(-10deg); 
 }
-.halloween-title span:nth-child(3) { /* CREAR */
+.halloween-title span:nth-child(3) { 
     transform: rotate(25deg); 
     animation-delay: -1s; 
 }
 
-/* --- AJUSTE CLAVE 2: Aumentamos el rango de la animación para más drama --- */
 @keyframes sway {
     0% { transform: rotate(0deg); }
-    /* Aumentamos el balanceo de 2deg a 5deg */
     100% { transform: rotate(5deg); } 
 }
 
 /* Pseudo-elemento para el efecto de goteo (chorreando) */
 .halloween-title::before {
-    /* Quitamos el contenido para que el text-shadow de goteo del principal se vea mejor */
     content: ''; 
     position: absolute;
     top: 0;
@@ -375,13 +265,10 @@ body {
     height: 100%;
     overflow: hidden; 
     opacity: 0.8;
-
-    /* *** MODIFICACIÓN: Hacemos el goteo también más rápido *** */
     animation: drip 0.8s linear infinite alternate; 
     transform-origin: top; 
 }
 
-/* Keyframes para el movimiento de goteo */
 @keyframes drip {
     0% {
         transform: translateY(0); 
@@ -391,32 +278,25 @@ body {
     }
 }
 
-/* Estilos para el logo fijo en la esquina */
+/* Estilos para el logo fijo en la esquina (ESCRITORIO) */
 .site-logo {
     position: fixed; 
-    top: 1px; /* Separación de 20px del borde superior */
-    left: 1150px; /* Separación de 20px del borde izquierdo */
-    
-    /* ¡CAMBIO AQUÍ! Aumenta el tamaño del logo */
-    width: 400px; /* Ahora el ancho es 150px, puedes ajustarlo si quieres más grande */
-    height: auto; /* Mantiene la proporción */
-    
+    top: 1px; 
+    left: 1150px; /* Posición específica de escritorio */
+    width: 400px; 
+    height: auto; 
     z-index: 1000; 
-    
-    
-    /* ¡NUEVO! Animación de parpadeo */
-    animation: neon-blink 1.5s infinite alternate; /* Aplica la animación */
+    animation: neon-blink 1.5s infinite alternate; 
 }
 
-/* Definición de la animación de parpadeo */
 @keyframes neon-blink {
     0% {
         opacity: 1;
         transform: scale(1);
     }
     50% {
-        opacity: 0.7; /* Ligeramente más transparente en el medio */
-        transform: scale(1.02); /* Un pequeño "zoom" para el efecto de parpadeo */
+        opacity: 0.7; 
+        transform: scale(1.02); 
     }
     100% {
         opacity: 1;
@@ -425,38 +305,16 @@ body {
 }
 
 
-/* Opcional: Estilos para pantallas más pequeñas si es necesario */
-@media (max-width: 768px) { /* Ajusta el breakpoint si lo necesitas */
-    .site-logo {
-        width: 100px; /* Un tamaño más adecuado para tablets */
-        top: 15px;
-        left: 15px;
-        /* Puedes ajustar la sombra y el borde también para móviles */
-        box-shadow: 0 0 10px #ff00ff;
-    }
-}
-
-@media (max-width: 480px) { /* Estilos para móviles pequeños */
-    .site-logo {
-        width: 80px; /* Un poco más pequeño en móviles */
-        top: 10px;
-        left: 10px;
-        box-shadow: 0 0 8px #ff00ff;
-    }
-}
-
 /* ------------------------------------------------------------------ */
-/* --- 5. MODAL STYLES (Elegante y Fluido) --- */
+/* --- MODAL STYLES (Compartidos) --- */
 /* ------------------------------------------------------------------ */
 
-/* Fondo oscuro y fijo que cubre toda la pantalla */
 .modal-backdrop {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    /* Fondo oscuro, pero menos opaco para una transición más suave */
     background-color: rgba(0, 0, 0, 0.7); 
     display: flex;
     justify-content: center;
@@ -464,35 +322,24 @@ body {
     z-index: 1000; 
 }
 
-/* Contenido del modal (Más pequeño, curvo, temático y fluido) */
 .modal-content {
-    /* Fondo más transparente (Morado vibrante y más transparente) */
     background-color: rgba(74, 0, 121, 0.7); 
-    
-    border: 1px solid #FF00FF; /* Borde sutil color neón magenta */
-    
-    /* Propiedades de tamaño y forma */
-    border-radius: 20px; /* Mayor curvatura */
-    padding: 25px; /* Más compacto */
+    border: 1px solid #FF00FF; 
+    border-radius: 20px; 
+    padding: 25px; 
     width: 90%;
-    max-width: 350px; /* Ancho reducido */
-    
-    /* Mantenemos el brillo neón */
+    max-width: 350px; 
     box-shadow: 0 0 10px #FF00FF, 
                 0 0 20px rgba(0, 0, 0, 0.6); 
-    
     display: flex;
     flex-direction: column;
     align-items: center;
     color: white;
-    
-    /* Animación de entrada y pulso */
     transform: scale(0.95);
     opacity: 0;
     animation: modal-fade-in 0.3s forwards, pulse-border 2s infinite alternate 0.3s;
 }
 
-/* Keyframes para la animación de entrada del modal */
 @keyframes modal-fade-in {
     to {
         opacity: 1;
@@ -500,7 +347,6 @@ body {
     }
 }
 
-/* Keyframes para la animación de pulso sutil del borde */
 @keyframes pulse-border {
     0% { border-color: #FF00FF; }
     100% { border-color: #FFAA00; } 
@@ -508,31 +354,27 @@ body {
 
 .modal-title {
     font-family: 'Creepster', cursive; 
-    font-size: 1.8rem; /* Título más pequeño acorde al tamaño del modal */
+    font-size: 1.8rem; 
     margin-bottom: 25px;
-    
-    /* ¡MEJORA DE LEGIBILIDAD! Usamos BLANCO PURO con brillo naranja */
     color: white; 
-    
     text-shadow: 
-        0 0 3px #FF8C00, /* Sombra media naranja */
-        0 0 8px #FFD700, /* Sombra brillante dorada */
-        1px 1px 0 #000;  /* Sombra negra para definición de contornos */
+        0 0 3px #FF8C00, 
+        0 0 8px #FFD700, 
+        1px 1px 0 #000;  
 }
 
 .modal-buttons-container {
     display: flex;
     flex-direction: column;
     width: 100%;
-    gap: 15px; /* Espacio reducido */
+    gap: 15px; 
     margin-bottom: 25px;
 }
 
-/* Estilo para los botones/enlaces dentro del modal */
 .modal-button {
     text-align: center;
-    padding: 15px 20px; /* Botones más compactos */
-    border-radius: 10px; /* Curvatura más alta */
+    padding: 15px 20px; 
+    border-radius: 10px; 
     font-weight: bold;
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
@@ -541,7 +383,7 @@ body {
     transition: all 0.3s;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
     border: none; 
-    font-size: 1rem; /* Texto de botón más pequeño */
+    font-size: 1rem; 
 }
 
 .modal-button:hover {
@@ -549,7 +391,6 @@ body {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
 }
 
-/* Colores Temáticos para los botones */
 .btn-web {
     background-color: #4A0079; 
     color: #FFD700; 
@@ -570,12 +411,11 @@ body {
     box-shadow: 0 0 15px #FF8C00, 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
-/* Botón de cierre */
 .modal-close-button {
     background: #1a0033; 
     color: #ffaa00; 
     border: 2px solid #555;
-    padding: 8px 25px; /* Botón de cierre más pequeño */
+    padding: 8px 25px; 
     border-radius: 6px;
     cursor: pointer;
     transition: background-color 0.2s;
@@ -588,4 +428,138 @@ body {
     background: #330066;
     color: white;
     border-color: #ffaa00;
+}
+
+
+/* ================================================================== */
+/* --- MEDIA QUERIES PARA RESPONSIVE DESIGN --- */
+/* ================================================================== */
+
+/* ------------------------------------------------------------------ */
+/* 1. TABLETS Y MÓVILES GRANDES (max-width: 1024px) */
+/* ------------------------------------------------------------------ */
+@media (max-width: 1024px) {
+    /* Ajuste inicial del logo para tablets */
+    .site-logo {
+        width: 250px; /* Reducir el tamaño del logo */
+        top: 15px;
+        left: 20px; /* Posicionarlo en una esquina predecible */
+        /* Ya no usamos 1150px fijo */
+    }
+}
+
+/* ------------------------------------------------------------------ */
+/* 2. MÓVILES (max-width: 768px - Incluye todos los iPhones) */
+/* ------------------------------------------------------------------ */
+@media (max-width: 768px) {
+    
+    /* ------------------- */
+    /* AJUSTES DE CONTENIDO PRINCIPAL */
+    /* ------------------- */
+
+    .home-container {
+        background-position: left -70px center; 
+    }
+
+
+    .center-content-wrapper {
+        padding-bottom: 20px; 
+        /* Usamos 'center' como justificación por defecto, no es necesario ajustarlo */
+    }
+
+    .main-content-area {
+        margin-top: 50px; /* Acercar botones al título */
+    }
+    
+    /* ------------------- */
+    /* LOGO (SOLUCIÓN CLAVE) */
+    /* ------------------- */
+    .site-logo {
+        position: absolute; /* Cambiamos a 'absolute' para que se mueva con el scroll y se posicione dentro del contenedor general */
+        top: 5px; /* Lo ponemos arriba */
+        left: 33%; /* Lo centramos horizontalmente */
+        transform: translateX(-50%); /* Ajuste de centrado */
+        width: 205px; /* Tamaño mucho más pequeño para centrarlo sin estorbar */
+        z-index: 1001; 
+        box-shadow: none; /* Quitamos la sombra de media query que no está bien definida */
+    }
+
+
+    /* ------------------- */
+    /* TÍTULO HALLOWEEN (SOLUCIÓN CLAVE) */
+    /* ------------------- */
+    .halloween-title {
+        font-size: 2.5rem; /* Reducir el tamaño de fuente para que quepa en el ancho */
+        padding-bottom: 15px; 
+        margin-top: -128px; /* BAJAMOS EL TÍTULO para dejar espacio al logo centrado arriba */
+        white-space: normal; /* Permitir que el texto se envuelva si es necesario */
+        line-height: 1.1;
+        /* Reducir el efecto de goteo para móviles */
+        text-shadow: 
+            0 0 3px rgba(255, 69, 0, 0.7), 
+            0 0 8px rgba(255, 140, 0, 0.6); 
+    }
+
+    /* Reducir la rotación para un arco más sutil en móviles */
+    .halloween-title span {
+        margin: 0 3px; 
+    }
+    .halloween-title span:nth-child(1) {
+        transform: rotate(-10deg); 
+    }
+    .halloween-title span:nth-child(2) {
+        transform: rotate(0deg); /* Central (sin rotación) */
+    }
+    .halloween-title span:nth-child(3) {
+        transform: rotate(10deg); 
+    }
+
+    /* ------------------- */
+    /* BOTONES */
+    /* ------------------- */
+    .main-menu {
+        gap: 30px;
+    }
+
+    .menu-button {
+        font-size: 1.8rem;
+        padding: 12px 20px;
+        letter-spacing: 1px;
+    }
+}
+
+/* ------------------------------------------------------------------ */
+/* 3. MÓVILES PEQUEÑOS (max-width: 480px - iPhone SE, etc.) */
+/* ------------------------------------------------------------------ */
+@media (max-width: 480px) {
+    /* ------------------- */
+    /* TÍTULO HALLOWEEN (LEGIBILIDAD MÁXIMA) */
+    /* ------------------- */
+    .halloween-title {
+        font-size: 1.8rem; 
+        margin-top: 80px; /* Subir un poco en pantallas muy pequeñas */
+    }
+
+    /* Desactivar el efecto de arco para la máxima legibilidad y estabilidad */
+    .halloween-title span {
+        transform: none !important; 
+        animation: none !important; 
+        margin: 0 1px;
+    }
+    
+    /* ------------------- */
+    /* LOGO */
+    /* ------------------- */
+    .site-logo {
+        width: 90px;
+        top: 5px;
+    }
+
+    /* ------------------- */
+    /* BOTONES */
+    /* ------------------- */
+    .menu-button {
+        font-size: 1.4rem; 
+        padding: 10px 20px;
+    }
 }
