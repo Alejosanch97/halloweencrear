@@ -627,7 +627,7 @@ body {
         top: 20px; /* Lo ponemos arriba */
         left: 28%; /* Lo centramos horizontalmente */
         transform: translateX(-50%); /* Ajuste de centrado */
-        width: 205px; /* Tamaño mucho más pequeño para centrarlo sin estorbar */
+        width: 300px; /* Tamaño mucho más pequeño para centrarlo sin estorbar */
         z-index: 1001; 
         box-shadow: none; /* Quitamos la sombra de media query que no está bien definida */
     }
