@@ -542,8 +542,8 @@ body {
     /* ------------------- */
     .site-logo {
         position: absolute; /* Cambiamos a 'absolute' para que se mueva con el scroll y se posicione dentro del contenedor general */
-        top: 5px; /* Lo ponemos arriba */
-        left: 29%; /* Lo centramos horizontalmente */
+        top: 10px; /* Lo ponemos arriba */
+        left: 23%; /* Lo centramos horizontalmente */
         transform: translateX(-50%); /* Ajuste de centrado */
         width: 205px; /* Tamaño mucho más pequeño para centrarlo sin estorbar */
         z-index: 1001; 
@@ -606,7 +606,7 @@ body {
     /* ------------------- */
 
     .home-container {
-        background-position: left -70px center; 
+        background-position: left -140px center; 
     }
 
 
@@ -624,8 +624,8 @@ body {
     /* ------------------- */
     .site-logo {
         position: absolute; /* Cambiamos a 'absolute' para que se mueva con el scroll y se posicione dentro del contenedor general */
-        top: 5px; /* Lo ponemos arriba */
-        left: 33%; /* Lo centramos horizontalmente */
+        top: 10px; /* Lo ponemos arriba */
+        left: 23%; /* Lo centramos horizontalmente */
         transform: translateX(-50%); /* Ajuste de centrado */
         width: 205px; /* Tamaño mucho más pequeño para centrarlo sin estorbar */
         z-index: 1001; 
@@ -638,7 +638,7 @@ body {
     /* ------------------- */
     .halloween-title {
         font-size: 2.5rem; /* Reducir el tamaño de fuente para que quepa en el ancho */
-        padding-bottom: 15px; 
+        padding-bottom: 25px; 
         margin-top: -128px; /* BAJAMOS EL TÍTULO para dejar espacio al logo centrado arriba */
         white-space: normal; /* Permitir que el texto se envuelva si es necesario */
         line-height: 1.1;
