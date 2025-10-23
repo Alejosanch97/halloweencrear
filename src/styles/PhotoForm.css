@@ -1,0 +1,72 @@
+/* Styling for the Form */
+.form-container {
+    position: relative;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 40px;
+    border: 5px solid #FF8C00; /* Orange border */
+    box-shadow: 0 0 20px #FF00FF; /* Pink/Purple glow */
+    max-width: 500px;
+    width: 90%;
+}
+
+.form-title {
+    font-size: 2.5rem;
+    color: #00FF00; /* Green slime color */
+    text-align: center;
+    margin-bottom: 30px;
+    text-shadow: 0 0 5px #00FF00;
+}
+
+.halloween-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-label {
+    color: #FFD700; /* Gold/Yellow label color */
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-input, .form-textarea {
+    background-color: #222;
+    color: #FFFAFA; /* Near white text */
+    border: 2px solid #8B0000; /* Dark Red border */
+    padding: 10px;
+    font-size: 1rem;
+    font-family: Arial, sans-serif; /* Use a readable font for input fields */
+}
+
+.form-input:focus, .form-textarea:focus {
+    outline: none;
+    border-color: #00FF00; /* Green focus glow */
+    box-shadow: 0 0 8px #00FF00;
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.form-submit-button {
+    background-color: #8B0000; /* Dark Red submit button */
+    color: #FFD700;
+    border: 3px solid #FF8C00;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-family: 'Creepster', cursive;
+    text-transform: uppercase;
+    margin-top: 20px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.form-submit-button:hover {
+    background-color: #FF4500; /* Orange-Red hover */
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 69, 0, 0.5);
+}
