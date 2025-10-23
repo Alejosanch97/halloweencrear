@@ -625,7 +625,7 @@ body {
     .site-logo {
         position: absolute; /* Cambiamos a 'absolute' para que se mueva con el scroll y se posicione dentro del contenedor general */
         top: 20px; /* Lo ponemos arriba */
-        left: 32%; /* Lo centramos horizontalmente */
+        left: 18%; /* Lo centramos horizontalmente */
         transform: translateX(-50%); /* Ajuste de centrado */
         width: 320px; /* Tamaño mucho más pequeño para centrarlo sin estorbar */
         z-index: 1001; 
