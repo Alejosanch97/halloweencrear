@@ -13,7 +13,7 @@ const API_URL = 'https://script.google.com/macros/s/AKfycbw2umTjRlZKCnVR-IYO1DAa
 // Enlace de Google Drive para el PDF
 const GOOGLE_DRIVE_PDF_URL = "https://drive.google.com/file/d/1gqVEI7SnBNPGW0RCCQ-QbBF10n35506p/preview";
 // Enlace del sitio web
-const WEBSITE_URL = "https://www.pedagogicocrear.edu.co/";
+const WEBSITE_URL = "https://www.pedagogicocrear.edu.co/admisiones-2026.html";
 
 
 // ------------------------------------------------------------------
@@ -48,7 +48,7 @@ const InfoModal = ({ show, onClose }) => {
                         className="modal-button btn-pdf"
                         onClick={onClose} // Cierra el modal al hacer clic
                     >
-                        INFO PDF 📄
+                        Portafolio 📄
                     </a>
                 </div>
 
@@ -233,7 +233,7 @@ export const Home = () => {
                 
                 {/* TÍTULO DE HALLOWEEN CON SPAN PARA EL EFECTO DE ARCO */}
                 <h1 className="halloween-title">
-                    <span>Instituto</span> <span>Pedagógico</span> <span>Crear</span>
+                    <span>Happy</span> <span>Crearween</span>
                 </h1>
                 
                 <div className="main-content-area">

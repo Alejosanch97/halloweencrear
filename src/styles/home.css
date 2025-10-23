@@ -282,7 +282,7 @@ body {
 .site-logo {
     position: fixed; 
     top: 1px; 
-    left: 1150px; /* Posición específica de escritorio */
+    left: 1050px; /* Posición específica de escritorio */
     width: 400px; 
     height: auto; 
     z-index: 1000; 
@@ -462,8 +462,8 @@ body {
     /* ------------------- */
     .site-logo {
         position: absolute; /* Cambiamos a 'absolute' para que se mueva con el scroll y se posicione dentro del contenedor general */
-        top: 5px; /* Lo ponemos arriba */
-        left: -2%; /* Lo centramos horizontalmente */
+        top: 1px; /* Lo ponemos arriba */
+        right: 50%; /* Lo centramos horizontalmente */
         transform: translateX(-50%); /* Ajuste de centrado */
         width: 205px; /* Tamaño mucho más pequeño para centrarlo sin estorbar */
         z-index: 1001; 
@@ -524,7 +524,7 @@ body {
     /* ------------------- */
 
     .home-container {
-        background-position: left -110px center; 
+        background-position: left -140px center; 
     }
 
 
@@ -543,7 +543,7 @@ body {
     .site-logo {
         position: absolute; /* Cambiamos a 'absolute' para que se mueva con el scroll y se posicione dentro del contenedor general */
         top: 5px; /* Lo ponemos arriba */
-        left: 33%; /* Lo centramos horizontalmente */
+        left: 29%; /* Lo centramos horizontalmente */
         transform: translateX(-50%); /* Ajuste de centrado */
         width: 205px; /* Tamaño mucho más pequeño para centrarlo sin estorbar */
         z-index: 1001; 
