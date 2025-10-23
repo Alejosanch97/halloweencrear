@@ -440,13 +440,81 @@ body {
 /* ------------------------------------------------------------------ */
 @media (max-width: 1024px) {
     /* Ajuste inicial del logo para tablets */
+     /* ------------------- */
+    /* AJUSTES DE CONTENIDO PRINCIPAL */
+    /* ------------------- */
+
+    .home-container {
+        background-position: left -70px center; 
+    }
+
+
+    .center-content-wrapper {
+        padding-bottom: 20px; 
+        /* Usamos 'center' como justificación por defecto, no es necesario ajustarlo */
+    }
+
+    .main-content-area {
+        margin-top: 50px; /* Acercar botones al título */
+    }
+    
+    /* ------------------- */
+    /* LOGO (SOLUCIÓN CLAVE) */
+    /* ------------------- */
     .site-logo {
-        width: 250px; /* Reducir el tamaño del logo */
-        top: 15px;
-        left: 20px; /* Posicionarlo en una esquina predecible */
-        /* Ya no usamos 1150px fijo */
+        position: absolute; /* Cambiamos a 'absolute' para que se mueva con el scroll y se posicione dentro del contenedor general */
+        top: 5px; /* Lo ponemos arriba */
+        left: 33%; /* Lo centramos horizontalmente */
+        transform: translateX(-50%); /* Ajuste de centrado */
+        width: 205px; /* Tamaño mucho más pequeño para centrarlo sin estorbar */
+        z-index: 1001; 
+        box-shadow: none; /* Quitamos la sombra de media query que no está bien definida */
+    }
+
+
+    /* ------------------- */
+    /* TÍTULO HALLOWEEN (SOLUCIÓN CLAVE) */
+    /* ------------------- */
+    .halloween-title {
+        font-size: 2.5rem; /* Reducir el tamaño de fuente para que quepa en el ancho */
+        padding-bottom: 15px; 
+        margin-top: -128px; /* BAJAMOS EL TÍTULO para dejar espacio al logo centrado arriba */
+        white-space: normal; /* Permitir que el texto se envuelva si es necesario */
+        line-height: 1.1;
+        /* Reducir el efecto de goteo para móviles */
+        text-shadow: 
+            0 0 3px rgba(255, 69, 0, 0.7), 
+            0 0 8px rgba(255, 140, 0, 0.6); 
+    }
+
+    /* Reducir la rotación para un arco más sutil en móviles */
+    .halloween-title span {
+        margin: 0 3px; 
+    }
+    .halloween-title span:nth-child(1) {
+        transform: rotate(-10deg); 
+    }
+    .halloween-title span:nth-child(2) {
+        transform: rotate(0deg); /* Central (sin rotación) */
+    }
+    .halloween-title span:nth-child(3) {
+        transform: rotate(10deg); 
+    }
+
+    /* ------------------- */
+    /* BOTONES */
+    /* ------------------- */
+    .main-menu {
+        gap: 30px;
+    }
+
+    .menu-button {
+        font-size: 1.8rem;
+        padding: 12px 20px;
+        letter-spacing: 1px;
     }
 }
+
 
 /* ------------------------------------------------------------------ */
 /* 2. MÓVILES (max-width: 768px - Incluye todos los iPhones) */
@@ -532,34 +600,77 @@ body {
 /* 3. MÓVILES PEQUEÑOS (max-width: 480px - iPhone SE, etc.) */
 /* ------------------------------------------------------------------ */
 @media (max-width: 480px) {
+     /* ------------------- */
+    /* AJUSTES DE CONTENIDO PRINCIPAL */
     /* ------------------- */
-    /* TÍTULO HALLOWEEN (LEGIBILIDAD MÁXIMA) */
-    /* ------------------- */
-    .halloween-title {
-        font-size: 1.8rem; 
-        margin-top: 80px; /* Subir un poco en pantallas muy pequeñas */
+
+    .home-container {
+        background-position: left -70px center; 
     }
 
-    /* Desactivar el efecto de arco para la máxima legibilidad y estabilidad */
-    .halloween-title span {
-        transform: none !important; 
-        animation: none !important; 
-        margin: 0 1px;
+
+    .center-content-wrapper {
+        padding-bottom: 20px; 
+        /* Usamos 'center' como justificación por defecto, no es necesario ajustarlo */
+    }
+
+    .main-content-area {
+        margin-top: 50px; /* Acercar botones al título */
     }
     
     /* ------------------- */
-    /* LOGO */
+    /* LOGO (SOLUCIÓN CLAVE) */
     /* ------------------- */
     .site-logo {
-        width: 90px;
-        top: 5px;
+        position: absolute; /* Cambiamos a 'absolute' para que se mueva con el scroll y se posicione dentro del contenedor general */
+        top: 5px; /* Lo ponemos arriba */
+        left: 33%; /* Lo centramos horizontalmente */
+        transform: translateX(-50%); /* Ajuste de centrado */
+        width: 205px; /* Tamaño mucho más pequeño para centrarlo sin estorbar */
+        z-index: 1001; 
+        box-shadow: none; /* Quitamos la sombra de media query que no está bien definida */
+    }
+
+
+    /* ------------------- */
+    /* TÍTULO HALLOWEEN (SOLUCIÓN CLAVE) */
+    /* ------------------- */
+    .halloween-title {
+        font-size: 2.5rem; /* Reducir el tamaño de fuente para que quepa en el ancho */
+        padding-bottom: 15px; 
+        margin-top: -128px; /* BAJAMOS EL TÍTULO para dejar espacio al logo centrado arriba */
+        white-space: normal; /* Permitir que el texto se envuelva si es necesario */
+        line-height: 1.1;
+        /* Reducir el efecto de goteo para móviles */
+        text-shadow: 
+            0 0 3px rgba(255, 69, 0, 0.7), 
+            0 0 8px rgba(255, 140, 0, 0.6); 
+    }
+
+    /* Reducir la rotación para un arco más sutil en móviles */
+    .halloween-title span {
+        margin: 0 3px; 
+    }
+    .halloween-title span:nth-child(1) {
+        transform: rotate(-10deg); 
+    }
+    .halloween-title span:nth-child(2) {
+        transform: rotate(0deg); /* Central (sin rotación) */
+    }
+    .halloween-title span:nth-child(3) {
+        transform: rotate(10deg); 
     }
 
     /* ------------------- */
     /* BOTONES */
     /* ------------------- */
+    .main-menu {
+        gap: 30px;
+    }
+
     .menu-button {
-        font-size: 1.4rem; 
-        padding: 10px 20px;
+        font-size: 1.8rem;
+        padding: 12px 20px;
+        letter-spacing: 1px;
     }
 }
