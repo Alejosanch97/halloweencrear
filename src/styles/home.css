@@ -439,13 +439,12 @@ body {
 /* 1. TABLETS Y MÓVILES GRANDES (max-width: 1024px) */
 /* ------------------------------------------------------------------ */
 @media (max-width: 1024px) {
-    /* Ajuste inicial del logo para tablets */
-     /* ------------------- */
+    /* ------------------- */
     /* AJUSTES DE CONTENIDO PRINCIPAL */
     /* ------------------- */
 
     .home-container {
-        background-position: left -70px center; 
+        background-position: left 2px center; 
     }
 
 
@@ -464,7 +463,7 @@ body {
     .site-logo {
         position: absolute; /* Cambiamos a 'absolute' para que se mueva con el scroll y se posicione dentro del contenedor general */
         top: 5px; /* Lo ponemos arriba */
-        left: 33%; /* Lo centramos horizontalmente */
+        left: -2%; /* Lo centramos horizontalmente */
         transform: translateX(-50%); /* Ajuste de centrado */
         width: 205px; /* Tamaño mucho más pequeño para centrarlo sin estorbar */
         z-index: 1001; 
@@ -477,7 +476,7 @@ body {
     /* ------------------- */
     .halloween-title {
         font-size: 2.5rem; /* Reducir el tamaño de fuente para que quepa en el ancho */
-        padding-bottom: 15px; 
+        padding-bottom: 5px; 
         margin-top: -128px; /* BAJAMOS EL TÍTULO para dejar espacio al logo centrado arriba */
         white-space: normal; /* Permitir que el texto se envuelva si es necesario */
         line-height: 1.1;
@@ -514,7 +513,6 @@ body {
         letter-spacing: 1px;
     }
 }
-
 
 /* ------------------------------------------------------------------ */
 /* 2. MÓVILES (max-width: 768px - Incluye todos los iPhones) */
@@ -600,7 +598,10 @@ body {
 /* 3. MÓVILES PEQUEÑOS (max-width: 480px - iPhone SE, etc.) */
 /* ------------------------------------------------------------------ */
 @media (max-width: 480px) {
-     /* ------------------- */
+    /* ------------------- */
+    /* TÍTULO HALLOWEEN (LEGIBILIDAD MÁXIMA) */
+    /* ------------------- */
+   /* ------------------- */
     /* AJUSTES DE CONTENIDO PRINCIPAL */
     /* ------------------- */
 
